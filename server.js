@@ -39,7 +39,7 @@ hbs.registerHelper('screamIt', (text) => {
 app.get('/', (req, res) => {
   res.render('home.hbs', {
     welcomeMessage: 'Hey, Welcome to my first Node.js static website :))))',
-    pageTitle: 'About Page'
+    pageTitle: 'Home Page'
   });
 
 });
@@ -47,6 +47,12 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
   res.render('about.hbs', {
     pageTitle: 'About Page'
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
   });
 });
 
